@@ -1,0 +1,10 @@
+import re
+A='我的电子邮件tom@gmail.com。将什么发送到jerry123@163.com或者3123432@qq.com。若遇特殊情况打电话给182123445678。'
+B=re.compile(r'[0-9a-zA-Z\_)+@[0-9a-zA-Z.]+?com')
+C=re.compile(r'1\d{10}')
+D=B.findall(A)
+E=C.findall(A)
+print('邮箱为：')
+print(D)
+print('手机号码为：')
+print(E)
